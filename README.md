@@ -1,2 +1,0 @@
-# Quick-Reg
-# Quick-Reg
