@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>QuickReg — Nigeria Market Entry & Foreign Company Incorporation Experts</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sora',sans-serif;background:#f0eeea;color:#1a1a1a;overflow-x:hidden;line-height:1.6;}
+:root{
+  --bg:#f0eeea;--bg2:#e8e5e0;--surface:#fff;--surface2:#f5f3f0;
+  --orange:#e8631a;--orange2:#f07a30;
+  --odim:rgba(232,99,26,0.1);--oborder:rgba(232,99,26,0.25);
+  --dark:#1a1a1a;--gray:#666;--gray2:#999;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.15);
+}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:4px;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(240,238,234,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-size:1.35rem;font-weight:800;color:var(--dark);text-decoration:none;letter-spacing:-0.5px;}
+.logo span{color:var(--orange);}
+.nav-links{display:flex;gap:1.8rem;list-style:none;}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--dark);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.btn-nav{padding:9px 18px;border-radius:6px;font-family:'Sora',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;white-space:nowrap;border:none;}
+.btn-nav.outline{background:transparent;border:1.5px solid var(--border2);color:var(--dark);}
+.btn-nav.outline:hover{border-color:var(--orange);color:var(--orange);}
+.btn-nav.fill{background:var(--orange);color:#fff;}
+.btn-nav.fill:hover{background:var(--orange2);}
+.ham{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{display:block;height:2px;width:22px;background:var(--dark);border-radius:2px;transition:all .3s;}
+.ham.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.ham.active span:nth-child(2){opacity:0;}
+.ham.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mob-nav{position:fixed;top:68px;left:0;right:0;z-index:299;background:rgba(240,238,234,0.98);border-bottom:1px solid var(--border);display:flex;flex-direction:column;max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.mob-nav.open{max-height:600px;}
+.mob-nav a{display:block;padding:14px 5%;color:var(--gray);text-decoration:none;font-size:.92rem;font-weight:500;border-bottom:1px solid var(--border);transition:color .2s;}
+.mob-nav a:hover{color:var(--orange);}
+.mob-cta{margin:16px 5% 20px !important;background:var(--orange) !important;color:#fff !important;text-align:center;border-radius:7px;font-weight:600 !important;padding:13px !important;border:none;}
+
+/* BUTTONS */
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'Sora',sans-serif;font-weight:600;font-size:.9rem;padding:14px 28px;border-radius:7px;text-decoration:none;border:none;cursor:pointer;transition:all .25s;}
+.btn-p:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,99,26,0.3);}
+.btn-g{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--border2);color:var(--dark);background:transparent;font-family:'Sora',sans-serif;font-weight:500;font-size:.9rem;padding:14px 28px;border-radius:7px;text-decoration:none;cursor:pointer;transition:all .25s;}
+.btn-g:hover{border-color:var(--orange);color:var(--orange);}
+
+/* LAYOUT */
+.wrap{max-width:1140px;margin:0 auto;padding:0 5%;}
+section{padding:100px 0;}
+.stag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);background:var(--odim);border:1px solid var(--oborder);padding:5px 12px;border-radius:100px;margin-bottom:1.2rem;}
+.stag::before{content:'';width:5px;height:5px;background:var(--orange);border-radius:50%;flex-shrink:0;}
+h2.big{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;line-height:1.15;color:var(--dark);}
+h2.big em{color:var(--orange);font-style:normal;}
+p.sub{color:var(--gray);font-size:.93rem;line-height:1.75;margin-top:.9rem;}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 5% 110px;background:var(--bg);overflow:hidden;}
+.hero-inner{position:relative;z-index:1;max-width:760px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--odim);border:1px solid var(--oborder);color:var(--orange);font-size:.73rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:1.8rem;}
+.dot-pulse{width:6px;height:6px;background:var(--orange);border-radius:50%;animation:dpulse 2s infinite;}
+@keyframes dpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.5);}}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.8rem);font-weight:800;color:var(--dark);line-height:1.08;margin-bottom:1.4rem;}
+.hero h1 em{color:var(--orange);font-style:normal;}
+.hero-desc{color:var(--gray);font-size:1rem;line-height:1.8;max-width:600px;margin-bottom:2.2rem;}
+.hero-desc strong{color:var(--dark);font-weight:600;}
+.iwant-title{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:.9rem;}
+.iwant-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;max-width:640px;}
+.iwant-btn{display:flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--border2);color:var(--dark);font-family:'Sora',sans-serif;font-size:.8rem;font-weight:500;padding:12px 16px;border-radius:9px;text-decoration:none;cursor:pointer;transition:all .25s;}
+.iwant-btn:hover{border-color:var(--orange);color:var(--orange);background:var(--odim);transform:translateY(-2px);}
+
+
+
+
+
+
+
+/* HOW IT WORKS */
+.how{background:var(--bg2);}
+.how-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:4rem;align-items:start;margin-top:4rem;}
+.steps{display:flex;flex-direction:column;}
+.step{display:flex;gap:1.1rem;}
+.step-l{display:flex;flex-direction:column;align-items:center;}
+.step-n{width:40px;height:40px;border-radius:50%;flex-shrink:0;border:1.5px solid var(--border2);background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--gray);transition:all .3s;}
+.step.act .step-n{border-color:var(--orange);color:var(--orange);background:var(--odim);}
+.step-line{width:1.5px;flex:1;min-height:32px;background:linear-gradient(to bottom,var(--border2),transparent);margin:5px 0;}
+.step-b{padding-bottom:2rem;}
+.step-ico{font-size:1.2rem;display:block;margin-bottom:.4rem;}
+.step-b h3{font-size:.92rem;font-weight:600;color:var(--dark);margin-bottom:.35rem;}
+.step.act .step-b h3{color:var(--orange);}
+.step-b p{font-size:.8rem;color:var(--gray);line-height:1.65;}
+.fcard{background:var(--surface);border:1.5px solid var(--border2);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08);position:sticky;top:88px;}
+.fcard-head{padding:26px 30px;background:var(--surface2);border-bottom:1px solid var(--border);}
+.fcard-head h3{font-size:1.3rem;font-weight:700;color:var(--dark);margin:.5rem 0 .3rem;}
+.fcard-head p{font-size:.8rem;color:var(--gray);}
+.fcard-body{padding:26px 30px;display:flex;flex-direction:column;gap:.9rem;}
+.fg{display:flex;flex-direction:column;gap:5px;}
+.fg label{font-size:.73rem;font-weight:600;color:var(--gray);}
+.fg input{background:var(--bg);border:1.5px solid var(--border2);border-radius:7px;padding:11px 14px;color:var(--dark);font-family:'Sora',sans-serif;font-size:.85rem;outline:none;transition:border-color .2s;width:100%;}
+.fg input::placeholder{color:var(--gray2);}
+.fg input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,99,26,.1);}
+.req{color:var(--orange);}
+.f-err{color:#c53030;font-size:.75rem;min-height:16px;}
+.f-sub{width:100%;background:var(--orange);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:.9rem;padding:13px;border:none;border-radius:7px;cursor:pointer;transition:all .25s;}
+.f-sub:hover{background:var(--orange2);transform:translateY(-2px);}
+.f-success{padding:40px 30px;text-align:center;display:none;}
+.f-success .si{font-size:2.8rem;display:block;margin-bottom:1rem;}
+.f-success h3{font-size:1.25rem;font-weight:700;color:var(--orange);margin-bottom:.8rem;}
+.f-success p{color:var(--gray);font-size:.85rem;line-height:1.65;}
+
+/* SERVICES */
+.services{background:var(--bg);}
+.svc-layout{display:grid;grid-template-columns:1fr 2.1fr;gap:4rem;align-items:start;}
+.svc-sticky{position:sticky;top:88px;}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.scard{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:22px 20px;transition:all .3s;}
+.scard:hover{border-color:var(--oborder);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.07);}
+.sico{width:36px;height:36px;background:var(--odim);border:1px solid var(--oborder);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;margin-bottom:.85rem;}
+.scard h3{font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.4rem;line-height:1.3;}
+.scard p{font-size:.75rem;color:var(--gray);line-height:1.6;}
+.sbadge{display:inline-block;margin-top:.7rem;font-size:.65rem;font-weight:600;color:var(--orange);background:var(--odim);padding:2px 8px;border-radius:4px;}
+
+/* FOREIGN INVESTORS */
+.foreign{background:var(--bg2);}
+.fbox{background:var(--surface);border:1.5px solid var(--border2);border-radius:20px;padding:56px;}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.ff-list{display:flex;flex-direction:column;gap:1.1rem;margin-top:2rem;}
+.ff{display:flex;gap:.9rem;align-items:flex-start;}
+.ff-ico{width:36px;height:36px;flex-shrink:0;background:var(--odim);border:1px solid var(--oborder);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.ff h4{font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.2rem;}
+.ff p{font-size:.75rem;color:var(--gray);line-height:1.6;}
+.fc-list{display:flex;flex-direction:column;gap:.85rem;}
+.fc{background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:16px 18px;display:flex;gap:12px;transition:all .2s;}
+.fc:hover{border-color:var(--oborder);transform:translateX(4px);}
+.fc-n{font-size:1.4rem;font-weight:800;color:var(--orange);line-height:1;min-width:24px;}
+.fc h4{font-size:.82rem;font-weight:600;color:var(--dark);margin-bottom:.15rem;}
+.fc p{font-size:.73rem;color:var(--gray);line-height:1.55;}
+
+/* CEO */
+.ceo{background:var(--bg);}
+.ceo-box{background:var(--surface);border:1.5px solid var(--border2);border-radius:20px;padding:56px;max-width:880px;margin:0 auto;position:relative;}
+.ceo-box::before{content:'\201C';font-size:12rem;font-weight:800;color:rgba(232,99,26,0.06);position:absolute;top:-20px;left:16px;line-height:1;pointer-events:none;}
+.ceo-q{font-size:clamp(1rem,2vw,1.15rem);color:var(--dark);line-height:1.85;position:relative;z-index:1;margin-bottom:2rem;}
+.ceo-q strong{color:var(--orange);font-weight:600;}
+.ceo-who{display:flex;align-items:center;gap:1.1rem;}
+.ceo-av{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#b45309);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:.9rem;flex-shrink:0;}
+.ceo-sig-img{max-width:180px;height:auto;display:block;margin-bottom:2px;}
+.ceo-name-text{font-weight:700;font-size:.88rem;color:var(--dark);margin-top:2px;}
+.ceo-title-text{font-size:.74rem;color:var(--gray);margin-top:1px;}
+.ceo-linkedin{display:inline-flex;align-items:center;gap:5px;color:var(--orange);font-size:.75rem;font-weight:600;text-decoration:none;margin-top:.5rem;}
+.ceo-linkedin:hover{text-decoration:underline;}
+
+/* WHY US */
+.why{background:var(--bg2);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3.5rem;}
+.wcard{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:26px 22px;transition:all .3s;}
+.wcard:hover{border-color:var(--oborder);transform:translateY(-4px);}
+.wcard-n{font-size:2rem;font-weight:800;color:rgba(232,99,26,0.2);line-height:1;margin-bottom:.7rem;}
+.wcard h3{font-size:.9rem;font-weight:600;color:var(--dark);margin-bottom:.45rem;}
+.wcard p{font-size:.79rem;color:var(--gray);line-height:1.65;}
+
+/* TESTIMONIALS */
+.testi{background:var(--bg);}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3.5rem;}
+.tcard{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:26px 22px;transition:all .3s;}
+.tcard:hover{border-color:var(--oborder);transform:translateY(-4px);}
+.tstars{color:var(--orange);font-size:.75rem;letter-spacing:2px;margin-bottom:.75rem;}
+.tq{font-size:2.2rem;font-weight:800;color:rgba(232,99,26,0.18);line-height:.6;margin-bottom:.75rem;}
+.tt{font-size:.82rem;color:var(--gray);line-height:1.7;margin-bottom:1.4rem;}
+.tauthor{display:flex;align-items:center;gap:10px;}
+.tav{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#b45309);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:.75rem;flex-shrink:0;}
+.tname{font-size:.8rem;font-weight:600;color:var(--dark);}
+.trole{font-size:.7rem;color:var(--gray);}
+
+/* FAQ */
+.faq{background:var(--bg2);}
+.faq-lay{display:grid;grid-template-columns:1fr 1.8fr;gap:4.5rem;}
+.faq-side{position:sticky;top:88px;}
+.fi{border-bottom:1px solid var(--border);padding:1rem 0;}
+.fi-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--dark);gap:1rem;user-select:none;transition:color .2s;}
+.fi-q:hover{color:var(--orange);}
+.fi-tog{width:24px;height:24px;flex-shrink:0;border:1.5px solid var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.88rem;color:var(--gray);transition:all .25s;}
+.fi.open .fi-tog{background:var(--orange);border-color:var(--orange);color:#fff;transform:rotate(45deg);}
+.fi-a{max-height:0;overflow:hidden;font-size:.8rem;color:var(--gray);line-height:1.7;transition:max-height .35s ease,padding .25s;}
+.fi.open .fi-a{max-height:300px;padding-top:.7rem;}
+
+/* CTA */
+.cta-sec{background:var(--dark);padding:100px 5%;}
+.cta-box{border-radius:22px;padding:72px 56px;text-align:center;max-width:860px;margin:0 auto;}
+.cta-box h2{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;color:#fff;line-height:1.15;margin:1rem 0 1.1rem;}
+.cta-box h2 em{color:var(--orange);font-style:normal;}
+.cta-box p{color:rgba(255,255,255,0.6);font-size:.92rem;max-width:460px;margin:0 auto 2.4rem;line-height:1.75;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--dark);font-family:'Sora',sans-serif;font-weight:600;font-size:.88rem;padding:13px 26px;border-radius:7px;text-decoration:none;transition:all .25s;}
+.btn-white:hover{background:var(--odim);color:var(--orange);}
+.btn-ol-w{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);background:transparent;font-family:'Sora',sans-serif;font-weight:500;font-size:.88rem;padding:13px 26px;border-radius:7px;text-decoration:none;cursor:pointer;transition:all .25s;}
+.btn-ol-w:hover{border-color:var(--orange);color:var(--orange);}
+
+/* FOOTER */
+footer{background:#111;padding:56px 5% 28px;}
+.fg-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;max-width:1140px;margin:0 auto 2.5rem;}
+.flogo{font-size:1.3rem;font-weight:800;color:#fff;display:block;margin-bottom:.9rem;text-decoration:none;}
+.flogo span{color:var(--orange);}
+.fbrand p{font-size:.8rem;color:rgba(255,255,255,0.4);line-height:1.7;max-width:230px;}
+.fcol h4{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem;}
+.fcol ul{list-style:none;}
+.fcol li{margin-bottom:.55rem;}
+.fcol a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:.8rem;transition:color .2s;cursor:pointer;}
+.fcol a:hover{color:var(--orange);}
+.fbot{border-top:1px solid rgba(255,255,255,0.08);padding-top:1.4rem;max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.fbot p{font-size:.72rem;color:rgba(255,255,255,0.3);}
+.fbot span{color:var(--orange);}
+
+/* SCROLL TOP */
+
+
+/* WHATSAPP */
+.wa{position:fixed;bottom:26px;right:26px;z-index:400;width:48px;height:48px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,0.15);}
+
+/* MOBILE */
+@media(max-width:900px){.nav-links{display:none;}.btn-nav.outline{display:none;}.ham{display:flex;}}
+@media(max-width:768px){
+  .how-grid,.svc-layout,.fgrid,.faq-lay,.fg-grid{grid-template-columns:1fr;}
+  .fcard,.faq-side,.svc-sticky{position:static;}
+  .svc-grid,.why-grid,.tgrid{grid-template-columns:1fr;}
+  
+  
+  
+  .fbox,.ceo-box,.cta-box{padding:28px 22px;}
+  .iwant-grid{grid-template-columns:1fr;}
+  .wa{bottom:22px;right:16px;}
+}
+
+/* ── LOADER ── */
+#qr-loader{
+  position:fixed;inset:0;z-index:9999;
+  background:#111;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  transition:opacity .7s cubic-bezier(.4,0,.2,1), visibility .7s;
+}
+#qr-loader.done{opacity:0;visibility:hidden;pointer-events:none;}
+.ql-word{display:flex;gap:0;overflow:hidden;}
+.ql-char{
+  font-family:'Sora',sans-serif;font-size:clamp(2.6rem,7vw,5rem);font-weight:800;
+  color:#fff;display:inline-block;
+  opacity:0;transform:translateY(60px) skewY(8deg);
+  transition:opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1);
+}
+.ql-char.orange{color:#e8631a;}
+.ql-char.in{opacity:1;transform:translateY(0) skewY(0);}
+.ql-bar{width:200px;height:2px;background:rgba(255,255,255,0.12);border-radius:2px;overflow:hidden;}
+.ql-fill{height:100%;width:0;background:#e8631a;border-radius:2px;transition:width 1.6s cubic-bezier(.4,0,.2,1);}
+.ql-sub{color:rgba(255,255,255,0.35);font-size:.72rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;opacity:0;transition:opacity .4s ease .4s;}
+.ql-sub.in{opacity:1;}
+
+/* ── CUSTOM CURSOR ── */
+#cur-dot{
+  position:fixed;width:8px;height:8px;border-radius:50%;
+  background:var(--orange);pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform .1s ease, opacity .3s ease;
+  mix-blend-mode:multiply;
+}
+#cur-ring{
+  position:fixed;width:36px;height:36px;border-radius:50%;
+  border:1.5px solid rgba(232,99,26,0.5);pointer-events:none;z-index:9997;
+  transform:translate(-50%,-50%);
+  transition:transform .18s cubic-bezier(.16,1,.3,1), width .25s ease, height .25s ease, opacity .3s ease;
+}
+body:not(.no-cursor) *{cursor:none !important;}
+#cur-dot.hidden,#cur-ring.hidden{opacity:0;}
+#cur-ring.hovered{width:56px;height:56px;border-color:var(--orange);background:rgba(232,99,26,0.06);}
+#cur-ring.clicking{width:28px;height:28px;}
+
+/* ── SCROLL REVEAL ── */
+[data-reveal]{
+  opacity:0;
+  transition:
+    opacity .75s cubic-bezier(.16,1,.3,1),
+    transform .75s cubic-bezier(.16,1,.3,1);
+}
+[data-reveal="up"]   {transform:translateY(40px);}
+[data-reveal="left"] {transform:translateX(-40px);}
+[data-reveal="right"]{transform:translateX(40px);}
+[data-reveal="scale"]{transform:scale(.93);}
+[data-reveal].revealed{opacity:1;transform:none;}
+
+/* ── PARALLAX ── */
+.parallax-wrap{overflow:hidden;}
+.parallax-el{will-change:transform;}
+
+/* ── NAV ANIMATION ── */
+nav{transform:translateY(-100%);opacity:0;transition:transform .6s cubic-bezier(.16,1,.3,1), opacity .6s ease;}
+nav.nav-in{transform:translateY(0);opacity:1;}
+
+/* ── HERO — floating canvas bg ── */
+#hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.55;}
+
+/* ── HERO — animated gradient orbs ── */
+.hero-orb{
+  position:absolute;border-radius:50%;
+  filter:blur(80px);pointer-events:none;
+  animation:orbFloat 8s ease-in-out infinite;
+}
+.hero-orb-1{width:480px;height:480px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(232,99,26,.18),transparent 70%);animation-duration:9s;}
+.hero-orb-2{width:320px;height:320px;bottom:60px;left:-60px;background:radial-gradient(circle,rgba(232,99,26,.1),transparent 70%);animation-duration:11s;animation-delay:-4s;}
+.hero-orb-3{width:200px;height:200px;top:40%;right:20%;background:radial-gradient(circle,rgba(232,99,26,.08),transparent 70%);animation-duration:7s;animation-delay:-2s;}
+@keyframes orbFloat{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-28px) scale(1.05);}}
+
+/* ── HERO — grid lines bg ── */
+.hero-grid-lines{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(232,99,26,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(232,99,26,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);
+  animation:gridShift 20s linear infinite;
+}
+@keyframes gridShift{0%{background-position:0 0;}100%{background-position:60px 60px;}}
+
+/* ── HERO — eyebrow clip reveal ── */
+.eyebrow{
+  overflow:hidden;
+  clip-path:inset(0 100% 0 0);
+  animation:none;
+}
+.eyebrow.hero-in{
+  animation:clipReveal .7s cubic-bezier(.16,1,.3,1) .1s both;
+}
+@keyframes clipReveal{from{clip-path:inset(0 100% 0 0);}to{clip-path:inset(0 0% 0 0);}}
+
+/* ── HERO — h1 line-by-line reveal ── */
+.hero h1{opacity:1;}
+.h1-line{display:block;overflow:hidden;line-height:1.15;}
+.h1-li{
+  display:block;
+  transform:translateY(100%);
+  opacity:0;
+  transition:transform .7s cubic-bezier(.16,1,.3,1), opacity .5s ease;
+}
+.h1-li.h1-orange{color:var(--orange);}
+.h1-li.in{transform:translateY(0);opacity:1;}
+
+/* ── HERO — desc line reveal ── */
+.hero-desc{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .65s ease, transform .65s cubic-bezier(.16,1,.3,1);
+}
+.hero-desc.hero-in{opacity:1;transform:none;}
+
+/* ── HERO — I Want To buttons stagger ── */
+.iwant-title{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;}
+.iwant-title.hero-in{opacity:1;transform:none;}
+.iwant-btn{opacity:0;transform:translateY(16px) scale(.97);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1);}
+.iwant-btn.hero-in{opacity:1;transform:none;}
+
+/* ── HERO — stats slide up ── */
+
+
+
+/* ── HERO — floating badge ── */
+.eyebrow{animation:badgePulse 3s ease-in-out infinite 1.5s;}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(232,99,26,.15);}50%{box-shadow:0 0 0 8px rgba(232,99,26,0);}}
+
+/* ── HERO — stat number shine ── */
+
+
+50%,100%{left:160%;}}
+
+/* ── HERO — iwant-btn glow on hover ── */
+.iwant-btn{box-shadow:0 0 0 0 rgba(232,99,26,0);transition:
+  opacity .5s cubic-bezier(.16,1,.3,1),
+  transform .5s cubic-bezier(.16,1,.3,1),
+  border-color .25s ease,
+  box-shadow .3s ease,
+  color .2s ease,
+  background .2s ease;}
+.iwant-btn:hover{
+  border-color:var(--orange);color:var(--orange);background:var(--odim);
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 8px 24px rgba(232,99,26,.15);
+}
+
+50%{transform:rotate(45deg) translateY(5px);}}
+
+/* ── BUTTON MAGNETIC + RIPPLE ── */
+.btn-p,.btn-g,.btn-nav,.iwant-btn,.f-sub,.pkg-btn{position:relative;overflow:hidden;}
+.ripple{
+  position:absolute;border-radius:50%;
+  background:rgba(255,255,255,0.28);
+  transform:scale(0);pointer-events:none;
+  animation:rippleOut .55s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes rippleOut{to{transform:scale(4);opacity:0;}}
+
+
+
+
+/* ── CARD HOVER LIFT (enhanced) ── */
+.scard,.wcard,.tcard,.fc,.iwant-btn{
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease, border-color .3s ease;
+}
+.scard:hover{transform:translateY(-6px) scale(1.01);}
+.wcard:hover,.tcard:hover{transform:translateY(-6px);}
+.fc:hover{transform:translateX(6px);}
+
+/* ── PROGRESS BAR ── */
+#scroll-progress{
+  position:fixed;top:0;left:0;height:2px;
+  background:var(--orange);z-index:9990;width:0%;
+  transition:width .1s linear;
+}
+
+/* ── SECTION TAG POP ── */
+.stag{transition:transform .25s cubic-bezier(.34,1.56,.64,1);}
+.stag:hover{transform:scale(1.04);}
+
+/* disable cursor on touch */
+@media(hover:none){
+  #cur-dot,#cur-ring{display:none;}
+  body:not(.no-cursor) *{cursor:auto !important;}
+}
+
+/* ── ENQUIRY MODAL ── */
+#enq-overlay{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(10,10,10,0.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  opacity:0;visibility:hidden;
+  transition:opacity .35s ease,visibility .35s ease;
+}
+#enq-overlay.open{opacity:1;visibility:visible;}
+#enq-box{
+  background:#fff;border-radius:18px;
+  width:100%;max-width:520px;
+  box-shadow:0 24px 80px rgba(0,0,0,0.18);
+  overflow:hidden;
+  transform:translateY(32px) scale(.97);
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+  max-height:90vh;overflow-y:auto;
+}
+#enq-overlay.open #enq-box{transform:translateY(0) scale(1);}
+.enq-head{
+  padding:28px 32px 20px;
+  border-bottom:1px solid rgba(0,0,0,0.07);
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  position:sticky;top:0;background:#fff;z-index:2;
+}
+.enq-head-text h3{font-size:1.2rem;font-weight:700;color:#1a1a1a;margin-bottom:3px;}
+.enq-head-text p{font-size:.8rem;color:#888;}
+.enq-close{
+  width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  background:#f5f3f0;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:#666;
+  transition:background .2s,color .2s;
+}
+.enq-close:hover{background:var(--orange);color:#fff;}
+.enq-body{padding:24px 32px 32px;display:flex;flex-direction:column;gap:15px;}
+.enq-field{display:flex;flex-direction:column;gap:5px;}
+.enq-field label{font-size:.73rem;font-weight:600;color:#555;letter-spacing:.2px;}
+.enq-field label span{color:var(--orange);}
+.enq-field input,.enq-field select,.enq-field textarea{
+  background:#f7f5f2;border:1.5px solid rgba(0,0,0,0.09);
+  border-radius:9px;padding:12px 15px;
+  color:#1a1a1a;font-family:'Sora',sans-serif;font-size:.87rem;
+  outline:none;width:100%;
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.enq-field input:focus,.enq-field select:focus,.enq-field textarea:focus{
+  border-color:var(--orange);background:#fff;
+  box-shadow:0 0 0 3px rgba(232,99,26,.09);
+}
+.enq-field input::placeholder,.enq-field textarea::placeholder{color:#bbb;}
+.enq-field textarea{resize:vertical;min-height:88px;line-height:1.6;}
+.enq-err{color:#dc2626;font-size:.73rem;min-height:14px;margin-top:2px;}
+.enq-submit{
+  width:100%;background:var(--orange);color:#fff;
+  font-family:'Sora',sans-serif;font-weight:700;font-size:.93rem;
+  padding:14px;border:none;border-radius:9px;cursor:pointer;
+  transition:background .25s,transform .25s,box-shadow .25s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:6px;
+}
+.enq-submit:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,99,26,.3);}
+.enq-submit:disabled{background:#ccc;transform:none;box-shadow:none;cursor:not-allowed;}
+.enq-spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ── MARKET ENTRY 2-STEP MODAL ── */
+#me-overlay{position:fixed;inset:0;z-index:1100;background:rgba(10,10,10,0.58);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;}
+#me-overlay.open{opacity:1;visibility:visible;}
+#me-box{background:#fff;border-radius:22px;width:100%;max-width:500px;box-shadow:0 32px 100px rgba(0,0,0,0.2);overflow:hidden;transform:translateY(36px) scale(.96);transition:transform .45s cubic-bezier(.16,1,.3,1);max-height:92vh;display:flex;flex-direction:column;}
+#me-overlay.open #me-box{transform:translateY(0) scale(1);}
+/* Progress */
+.me-prog{padding:28px 32px 0;}
+.me-prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.me-prog-label{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);}
+.me-prog-pct{font-size:.68rem;color:#bbb;font-weight:500;}
+.me-track{height:3px;background:#f0eeea;border-radius:3px;overflow:hidden;}
+.me-fill{height:100%;background:var(--orange);border-radius:3px;transition:width .55s cubic-bezier(.16,1,.3,1);}
+/* Header */
+.me-hdr{padding:18px 32px 0;display:flex;justify-content:space-between;align-items:flex-start;}
+.me-hdr-txt h3{font-size:1.3rem;font-weight:700;color:#1a1a1a;margin-bottom:3px;}
+.me-hdr-txt p{font-size:.78rem;color:#999;}
+.me-x{width:32px;height:32px;border-radius:50%;background:#f5f3f0;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#777;flex-shrink:0;transition:background .2s,color .2s;}
+.me-x:hover{background:var(--orange);color:#fff;}
+/* Steps */
+.me-steps{overflow:hidden;flex:1;}
+.me-s{padding:22px 32px 4px;display:none;flex-direction:column;gap:15px;animation:meSlideIn .38s cubic-bezier(.16,1,.3,1) both;}
+.me-s.active{display:flex;}
+.me-s.back{animation:meSlideBack .38s cubic-bezier(.16,1,.3,1) both;}
+@keyframes meSlideIn{from{opacity:0;transform:translateX(28px);}to{opacity:1;transform:translateX(0);}}
+@keyframes meSlideBack{from{opacity:0;transform:translateX(-28px);}to{opacity:1;transform:translateX(0);}}
+/* Fields */
+.me-f{display:flex;flex-direction:column;gap:5px;}
+.me-f label{font-size:.72rem;font-weight:600;color:#444;letter-spacing:.2px;}
+.me-f label .req{color:var(--orange);}
+.me-f label .opt{font-weight:400;color:#bbb;font-size:.68rem;margin-left:3px;}
+.me-f input,.me-f select,.me-f textarea{background:#f8f7f5;border:1.5px solid rgba(0,0,0,0.09);border-radius:11px;padding:13px 16px;color:#1a1a1a;font-family:'Sora',sans-serif;font-size:.88rem;outline:none;width:100%;transition:border-color .2s,box-shadow .2s,background .2s;}
+.me-f input:focus,.me-f select:focus,.me-f textarea:focus{border-color:var(--orange);background:#fff;box-shadow:0 0 0 3px rgba(232,99,26,.09);}
+.me-f input::placeholder,.me-f textarea::placeholder{color:#bbb;}
+.me-f textarea{resize:vertical;min-height:80px;line-height:1.65;}
+.me-f select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+/* Error */
+.me-err{color:#dc2626;font-size:.72rem;min-height:14px;padding:0 32px;}
+/* Footer */
+.me-foot{padding:14px 32px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid rgba(0,0,0,0.06);margin-top:6px;}
+.me-btn-back{background:none;border:1.5px solid rgba(0,0,0,0.12);color:#777;font-family:'Sora',sans-serif;font-weight:600;font-size:.85rem;padding:12px 22px;border-radius:10px;cursor:pointer;transition:all .2s;}
+.me-btn-back:hover{border-color:var(--orange);color:var(--orange);}
+.me-btn-back:disabled{opacity:0;pointer-events:none;}
+.me-btn-next{flex:1;background:var(--orange);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:.92rem;padding:13px 24px;border-radius:10px;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.me-btn-next:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 22px rgba(232,99,26,.28);}
+.me-btn-next:disabled{background:#ccc;transform:none;box-shadow:none;cursor:not-allowed;}
+.me-spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none;flex-shrink:0;}
+/* ME Thank You */
+#me-ty{position:fixed;inset:0;z-index:2100;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease;}
+#me-ty.show{opacity:1;visibility:visible;}
+@media(max-width:600px){
+  .me-prog,.me-hdr,.me-s,.me-foot,.me-err{padding-left:20px;padding-right:20px;}
+  #me-box{border-radius:16px;}
+}
+#thankyou-page{
+  position:fixed;inset:0;z-index:2000;
+  background:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 24px;text-align:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .5s ease,visibility .5s ease;
+}
+#thankyou-page.show{opacity:1;visibility:visible;}
+.ty-icon{font-size:4rem;margin-bottom:1.2rem;display:block;animation:tyPop .6s cubic-bezier(.34,1.56,.64,1) .1s both;}
+@keyframes tyPop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+.ty-title{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;color:#1a1a1a;margin-bottom:.8rem;animation:tyUp .6s .25s ease both;}
+.ty-msg{font-size:1rem;color:#555;line-height:1.75;max-width:400px;margin:0 auto 2rem;animation:tyUp .6s .38s ease both;}
+.ty-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-family:'Sora',sans-serif;font-weight:600;font-size:.9rem;padding:13px 26px;border-radius:9px;text-decoration:none;animation:tyUp .6s .5s ease both;transition:background .2s,transform .2s;}
+.ty-wa:hover{background:#1da851;transform:translateY(-2px);}
+@keyframes tyUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:600px){
+  .enq-head,.enq-body{padding-left:20px;padding-right:20px;}
+  #enq-box{border-radius:14px;}
+}
+
+/* ── SCROLL TO TOP ── */
+#stb{position:fixed;bottom:90px;right:26px;z-index:400;width:42px;height:42px;border-radius:50%;background:#fff;border:1.5px solid rgba(0,0,0,0.15);color:#1a1a1a;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;opacity:0;visibility:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.1);}
+#stb.show{opacity:1;visibility:visible;}
+#stb:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-3px);}
+@media(max-width:768px){#stb{bottom:84px;right:16px;}}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="scroll-progress"></div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+
+<!-- LOADER -->
+<div id="qr-loader">
+  <div class="ql-word">
+    <span class="ql-char" data-delay="0">Q</span>
+    <span class="ql-char" data-delay="60">u</span>
+    <span class="ql-char" data-delay="120">i</span>
+    <span class="ql-char" data-delay="180">c</span>
+    <span class="ql-char" data-delay="240">k</span>
+    <span class="ql-char orange" data-delay="320">R</span>
+    <span class="ql-char orange" data-delay="380">e</span>
+    <span class="ql-char orange" data-delay="440">g</span>
+  </div>
+  <div class="ql-bar"><div class="ql-fill" id="ql-fill"></div></div>
+  <div class="ql-sub" id="ql-sub">Nigeria Market Entry Experts</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Quick<span>Reg</span></a>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#foreign">Foreign Investors & Diaspora</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="btn-nav fill" onclick="openEnquiry('Book a Consultation');return false;">Book Consultation</a>
+    <button class="ham" id="ham"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#how" onclick="closeNav()">How It Works</a>
+  <a href="#services" onclick="closeNav()">Services</a>
+  <a href="#foreign" onclick="closeNav()">Foreign Investors & Diaspora</a>
+  <a href="#faq" onclick="closeNav()">FAQ</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  <a href="#" class="mob-cta" onclick="closeNav();openEnquiry('Book a Consultation');return false;">Book a Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-inner">
+    <div class="eyebrow"><div class="dot-pulse"></div>Nigeria's #1 Market Entry Partner</div>
+    <h1 id="hero-h1">Seamless Market Entry:<br/><em>Incorporate Your Business</em><br/>in Nigeria</h1>
+    <p class="hero-desc">The preferred partner for <strong>Foreign Direct Investment (FDI)</strong> and <strong>Global Market Expansion.</strong> We handle your 100M Share Capital incorporation, NIPC registration, and Business Permits with <strong>100% remote onboarding.</strong></p>
+    <div class="iwant-title">I Want To:</div>
+    <div class="iwant-grid">
+      <a href="#" class="iwant-btn" onclick="openEnquiry('Register a Company / Business Name');return false;">🏢 Register a Company / Business Name</a>
+      <a href="#" class="iwant-btn" onclick="openEnquiry('NGO / Church / Club or Foundation');return false;">⛪ NGO / Church / Club or Foundation</a>
+      <a href="#" class="iwant-btn" onclick="openEnquiry('Tax Registration');return false;">🧾 Tax Registration</a>
+      <a href="#" class="iwant-btn" onclick="openEnquiry('SCUML Registration');return false;">🛡️ SCUML Registration</a>
+      <a href="#" class="iwant-btn" onclick="openEnquiry('Ships & Yachts Registration');return false;">⚓ Ships & Yachts Registration</a>
+      <a href="#" class="iwant-btn" onclick="openEnquiry('Free Trade Zone Company');return false;">🌐 Free Trade Zone Company</a>
+    </div>
+  </div>
+  </div>
+  </section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="stag" data-reveal="up">The Process</div>
+    <h2 class="big" data-reveal="up" style="transition-delay:.08s">From First Contact to <em>Bank-Ready</em> in 4 Steps</h2>
+    <p class="sub" data-reveal="up" style="max-width:520px;transition-delay:.16s">Our fully remote process is designed for global executives and entrepreneurs who need speed, clarity, and compliance.</p>
+    <div class="how-grid">
+      <div class="steps" data-reveal="left">
+        <div class="step act">
+          <div class="step-l"><div class="step-n" id="s1n">01</div><div class="step-line"></div></div>
+          <div class="step-b"><span class="step-ico">🔐</span><h3>Submit Documents & Consultation</h3><p>Submit your business brief and documents securely online. Our compliance team reviews everything — no embassy visits, no physical presence required.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-l"><div class="step-n">02</div><div class="step-line"></div></div>
+          <div class="step-b"><span class="step-ico">🔍</span><h3>Name Search & Regulatory Check</h3><p>We conduct CAC name availability checks, NIPC eligibility screening, and verify your share capital structure.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-l"><div class="step-n">03</div><div class="step-line"></div></div>
+          <div class="step-b"><span class="step-ico">⚡</span><h3>Filing & Regulatory Submission</h3><p>Our agents prepare and file all incorporation documents, NIPC forms, and Business Permits on your behalf.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-l"><div class="step-n">04</div></div>
+          <div class="step-b"><span class="step-ico">🏦</span><h3>Global Compliance & Bank Ready</h3><p>Receive your Certificate of Incorporation, MEMART, TIN, and all documents needed to open a Nigerian corporate bank account.</p></div>
+        </div>
+      </div>
+      <div class="fcard" data-reveal="right" data-reveal="right">
+        <div class="fcard-head">
+          <div class="stag">Free Name Check</div>
+          <h3>Request a Company Name Check</h3>
+          <p>Submit your proposed name — results sent to your email within 1 hour.</p>
+        </div>
+        <div class="fcard-body" id="fBody">
+          <div class="fg"><label>Your Full Name <span class="req">*</span></label><input type="text" id="fn" placeholder="e.g. Chukwuemeka Obi"/></div>
+          <div class="fg"><label>Proposed Company Name <span class="req">*</span></label><input type="text" id="fb" placeholder="e.g. Greenfield Nigeria Ltd"/></div>
+          <div class="fg"><label>Alternative Name</label><input type="text" id="fa" placeholder="Backup name (optional)"/></div>
+          <div class="fg"><label>Email Address <span class="req">*</span></label><input type="email" id="fe" placeholder="Results will be sent here"/></div>
+          <div class="f-err" id="ferr"></div>
+          <button class="f-sub" onclick="submitForm()">Submit for Name Check →</button>
+          <p style="font-size:.7rem;color:var(--gray);text-align:center;margin-top:.7rem;">🔒 Your details are encrypted and never shared.</p>
+        </div>
+        <div class="f-success" id="fSucc">
+          <span class="si">✅</span>
+          <h3>Request Submitted!</h3>
+          <p>Name check results will be sent to your email within <strong>1 hour.</strong></p>
+          <a href="https://wa.me/2348086732547" class="btn-p" style="margin-top:1.2rem;">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-layout">
+      <div class="svc-sticky" data-reveal="left">
+        <div class="stag" data-reveal="up">Our Services</div>
+        <h2 class="big" data-reveal="up" style="transition-delay:.1s">Full-Spectrum <em>Market Entry</em> Services</h2>
+        <p class="sub" data-reveal="up" style="transition-delay:.18s">Every service designed for cross-border investors, entrepreneurs, and global corporations entering Africa's largest economy.</p>
+        <a href="#" class="btn-p" style="margin-top:2rem;display:inline-flex;" onclick="openEnquiry('General Enquiry');return false;">Get Started →</a>
+      </div>
+      <div class="svc-grid" data-reveal="up" style="transition-delay:.15s">
+        <div class="scard"><div class="sico">🏗️</div><h3>Subsidiary & Foreign-Owned Setup</h3><p>Establish a fully foreign-owned Nigerian limited company with 100M minimum share capital, NIPC-registered and bank-ready.</p><span class="sbadge">Foreign-owned company Nigeria</span></div>
+        <div class="scard"><div class="sico">🏢</div><h3>Business Name Registration</h3><p>Register a sole proprietorship or partnership with the CAC. Ideal for entrepreneurs and lean market entry strategies.</p><span class="sbadge">CAC Registration</span></div>
+        <div class="scard"><div class="sico">🌐</div><h3>NGO / Incorporated Trustees</h3><p>Register non-profit organizations, foundations, churches, clubs, and associations with full CAC legal standing.</p><span class="sbadge">Non-Profit</span></div>
+        <div class="scard"><div class="sico">💼</div><h3>Nigeria Tax ID for Foreigners</h3><p>Tax Compliance & VAT Onboarding — obtain your FIRS TIN required for all regulated operations and contracts.</p><span class="sbadge">Nigeria Tax ID for Foreigners</span></div>
+        <div class="scard"><div class="sico">🔖</div><h3>Intellectual Property Protection</h3><p>Secure exclusive rights to your brand name, logo, and IP assets through the Nigerian Trademarks Registry.</p><span class="sbadge">IP Rights Nigeria</span></div>
+        <div class="scard"><div class="sico">📊</div><h3>Corporate Governance & Maintenance</h3><p>Post-incorporation compliance: annual returns, regulatory filings, and corporate secretarial services.</p><span class="sbadge">Post-incorporation compliance</span></div>
+        <div class="scard"><div class="sico">📑</div><h3>Legal Due Diligence Reports</h3><p>Company verification Nigeria — certified true copies of all CAC documents for investors and legal teams.</p><span class="sbadge">Company verification Nigeria</span></div>
+        <div class="scard"><div class="sico">🛡️</div><h3>NAFDAC & SON Certification</h3><p>Regulatory registration for food, pharmaceuticals, cosmetics, and manufactured goods entering the Nigerian market.</p><span class="sbadge">Regulatory</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOREIGN INVESTORS -->
+<section class="foreign" id="foreign">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:2.8rem;">
+      <div class="stag" style="margin:0 auto 1rem;">For Foreign Investors & Diaspora</div>
+      <h2 class="big" data-reveal="up" style="max-width:620px;margin:0 auto;">Establishing a <em>Presence from Abroad</em></h2>
+      <p class="sub" style="max-width:500px;margin:.8rem auto 0;text-align:center;">Everything you need to enter Nigeria's $440B economy as a foreign investor — handled remotely.</p>
+    </div>
+    <div class="fbox" data-reveal="up">
+      <div class="fgrid">
+        <div>
+          <h3 style="font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:.5rem;">Your <em style="color:var(--orange);font-style:normal;">Complete</em> Entry Checklist</h3>
+          <p style="color:var(--gray);font-size:.83rem;line-height:1.7;">QuickReg handles every regulatory requirement for foreign-owned companies under Nigerian law.</p>
+          <div class="ff-list">
+            <div class="ff"><div class="ff-ico">🟢</div><div><h4>CERPAC (Combined Expatriate Residence Permit & Aliens Card)</h4><p>We process the green card equivalent for foreign nationals — required for company owners and expatriate staff in Nigeria.</p></div></div>
+            <div class="ff"><div class="ff-ico">🧾</div><div><h4>Tax Registration & Compliance</h4><p>Full FIRS TIN registration, VAT onboarding, and ongoing tax compliance for your Nigerian entity.</p></div></div>
+            <div class="ff"><div class="ff-ico">📋</div><div><h4>Business Permits for Company Owners</h4><p>We secure all required Business Permits for foreign company owners and directors operating in Nigeria.</p></div></div>
+            <div class="ff"><div class="ff-ico">⚖️</div><div><h4>Section 18 NIPC Act Compliance</h4><p>Mandatory for all foreign-owned businesses under the Nigerian Investment Promotion Commission Act.</p></div></div>
+            <div class="ff"><div class="ff-ico">💰</div><div><h4>Minimum ₦100M Share Capital</h4><p>We guide you through structuring the minimum ₦100 Million share capital for foreign-owned entities.</p></div></div>
+            <div class="ff"><div class="ff-ico">📜</div><div><h4>Certificate of Capital Importation (CCI) Advisory</h4><p>Expert advisory on obtaining your CCI — essential for repatriating dividends and capital under CBN regulations.</p></div></div>
+          </div>
+        </div>
+        <div class="fc-list">
+          <div class="fc"><div class="fc-n">01</div><div><h4>Corporate Bank Account Ready</h4><p>All documents structured to meet Nigerian bank KYC requirements so you can open a corporate account within days.</p></div></div>
+          <div class="fc"><div class="fc-n">02</div><div><h4>Tax Registration</h4><p>FIRS TIN registration and VAT onboarding — mandatory before any regulated business operations begin.</p></div></div>
+          <div class="fc"><div class="fc-n">03</div><div><h4>Business Permit for Company Owners</h4><p>We obtain all required Business Permits for foreign directors and company owners operating in Nigeria.</p></div></div>
+          <div class="fc"><div class="fc-n">04</div><div><h4>CERPAC Cards for Expatriate Staff</h4><p>We process the Combined Expatriate Residence Permit & Aliens Card for all foreign national employees.</p></div></div>
+          <div class="fc"><div class="fc-n">05</div><div><h4>Ongoing Compliance Partner</h4><p>Annual returns, tax filings, regulatory updates — we remain your on-ground compliance guardian.</p></div></div>
+          <a href="#" class="btn-p" style="margin-top:.4rem;justify-content:center;" onclick="openME();return false;">Start Your Market Entry →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEO NOTE -->
+<section class="ceo">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:2.8rem;">
+      <div class="stag" data-reveal="up" style="margin:0 auto;">A Note from Our Senior Partner</div>
+    </div>
+    <div class="ceo-box" data-reveal="scale" data-reveal="scale">
+      <p class="ceo-q">
+        "When we founded QuickReg, our goal wasn't simply to launch another registration agency. It was to solve a fundamental problem: <strong>the friction of doing business in Africa's largest economy.</strong><br/><br/>
+        For too long, the 'Nigerian Market Entry' process was shrouded in complexity, manual bottlenecks, and uncertainty. Whether you are a local entrepreneur launching your first startup or a global corporation establishing a strategic subsidiary, the hurdles were the same.<br/><br/>
+        QuickReg is a <strong>white-glove service</strong> specifically built for fragile, high-value, and sensitive projects — offering specialized care that extends far beyond standard registration, guiding each project from origin to its final setup and <strong>ongoing support.</strong>"
+      </p>
+      <div class="ceo-who">
+        <div class="ceo-av">BB</div>
+        <div>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAABDigAwAEAAAAAQAAAk0AAAAA/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgAZAC3AwEiAAIRAQMRAf/EABsAAQEAAwEBAQAAAAAAAAAAAAABAgMEBQYH/8QANhAAAQQBAwIEBAMGBwAAAAAAAQACAxEEBRIhMUFRYXGBBhMUIiMykRUkM1JioUJDU3KCkrH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAHREBAQEAAgMBAQAAAAAAAAAAAAERAiESMUFRA//aAAwDAQACEQMRAD8A5cqLsB6rjLCDVL9JZ8N6a026J0h/qcuuHTcGD+FiRN89oXHGn5lBgZmRxDjSv9Glepi/C2rSkE42wf1ml+htAaKAA9FkqPkcb4OyBRmnjb6C17OJoEWPy6Vzj6L1kV1Ma48aOJtAE+q2hrR0aEtE0xfZUFRUILfCWoiC2ilqoFooogyBS1jaIMr5UtREBW1EQW0URVGpFO6BZbVW1ERGQNqrALIFBVVFUBVRVEFeVEQUIpaWqBKWotM+XFjywRvJ3ZEny2ADvRPPlwnsb1FolyooZY4nk7pOgAuh4nwHIHutyDJRasicY+NJMRYY0mvHyUxnSOh/GLTICQ4tFC/JPmjdaiIoFooiowQdERRVU7oiCqj9VjYAJPAHcrgx52atukjma7EadrRG/mWu5I6N8B369FZDXoMkY/dse1200dpBorMLSXQ4sDnu2RRxt3ONUAAscXLGSH/gyxOZVtkABoiwff8AVM+mulFLXPn5jcHDfkOaXkU1jB1e4mmj3JCSaOlVacaR8uLFJIGh72Bzg02ASO3kttqHQiLz3Zv7S0iWfSpgXSBzYXn7bcCRxfoaPurJqPQ7138F5GS/5uoYsoP2/WiJvo1jyT/2v9FoyZMLFxXFmjZTpzTWfMh5Lzw25CeeSOQVw5kWpYf7Jx5bjxPrI2B7Hh80biCOXVQBs88kE9e668eLNr1fmfO13JhH+W2Fr3O6NHLtvqSRx4Bd5lH1hYMmP7I9z4eNwvo7rYHsvlcjGx8fU9VZKxrIGsa6MyN3Bg2De8X+Z7iWtB5N2uyDS81kcMTYNr8nAbDPkEgmN5JL3Os25xsV5+CXjM9pLW3K+IMbP0t5wS50riymubw0F4pzq6N/v5LPVNUl0sOgxtj348ByJnyg/cLoDjoSb57LpxtPkfDKzPbDtfE2BscJNBre9kDknnyoLOLR8VmUMuR02RkCrkmlJurrjgcWa47lTeMXK6pMlsWM2Y876DAD+cnoAt1rjh0zCx5xPHAA8AhtuJDAeu0E032XWufTULKIii4wRREAuDWlzjQAsk8ALlGRPlj90Ajj/wBeRt3/ALW9/U0PVRgGe4yP5xmOIYw9JCDy4+IvoPfwXZfdX0e3h6rgwSuxsGUvyZs2Ta58zt2yNot5A6N444H+Jb3YeOdaxjhQRwOxrOQ+JgaNpaQ2M11NkGuwF91wS4GTrnxHkzN1KfGxMJoxSzH+18jjT3/f1aOWjjnha9Tjx9I03Jz9CZIyXDBlkcJXGF9fma6yQ8ny5vuF2nya5vV1nIY2bAw3BzvqJ9xY0WZAwbtvudq9DGjexrnTEOlkdueW9L7AeQHC+aE0jvinJYzIe6SDBYZ5XD+A1xL3bW9AaDQB6k3SuLnzyaPomDPlvik1CF888z3ne2Fo3EB3YkOaL7CypePUiy9vqrF7QRfWu6+e1bUsbO1PT9LxZ2yyune5zW2aLWkXfQ0XXx0LV4UGXj4WJrLsP5kM2Rlshiia074cY7SXtaLLW09zrPcg9V678LMk1LGztPwRFB9M/Cx7AY6CMlpEjgeQOHU3r0vqas4Tjdpbrsy/inBw48kRxvf9I5rXWQ1uw0N4PgLA8z+q4834lyI9L1ecNbAY3RRYZ2/dukaCC4HwBDvLut7fhOCRuox5En4eZkwuAaLqGIN2Rm/Hab9V6p0fAOdPmOgD5Mhu2RryXMPAB+08AkAAnuApv84uV4j9YlGtZ0uPDPkbcVsOGWsLmSlrnmR/HFAgDxNADqnwjjSmFwmL342HJ+4gghrQ4W7qAXOaXFt9BZA7lfQQzRMmkxAGQ/KDdjBTQWV1A8AbHHSlqnznzPdj4LmyT9HSH7mQ+bj3Pg39aCnl1kgl/V6oAKMOFyT4ykcD/i036uHgt2ZhwZ+M7GyGkxuc132uo21wcOfUBZY2NHiY7YY7IbZLnGy4nkknuSeVsXO38XGEsEE8scssMb3xHdG5zQSw+I8FmlqKKqiIgJaKIKiiIMUvlFAisYomQRiOMENBJAu6s2tedmMwMKXKkBcIm2Gjq49A0eZJA90ynzsgLsaISyAj7NwG4XyATxdLlZjZGblR5GcxsUUDt0OMHB33/wA7yOCR2A4HXk9LP2o5NOxXxxjTcqQNMTBkZhDq+dJI5xIv+UEG/HgdFlkbdekjwMZoOmRPa7JmbwyXabETPEWBuI4AFdTx6WRgYWY5r8rEgncz8pkjDq/VdLQGtDQAABQAFABavL6kjzdO0kwHU5Mssll1HIe+Qtv+HW1jfZv9yVhB8MaZE2H50cmY+BoZHJkyFxawVTOKG3gcVzVmyvVBVtTyq5FAAeXgAOPVwHJ91bWKoKyrJFjaWiMZoIchu2eGOVo6B7Q7/wBWUbWRxiONjWMb0a0UB7JaWqMlFLUUFRRQlBUUCtoFlERABRREEKloogqKIiqlqBLQZA2lrBUFBkCslhfmloM7S1giIytFjaWisrUtRLQW0UQIi+SqxVQLVCiyjDS8BxoIIirgA47TYRUYWpaIoopaIiLanZERUu1R0REC07IiIqqIioURERboKA9URFW0REEVCIiHZUdERAvhERUf/9k=" alt="Biola Bhadmus signature" class="ceo-sig-img"/>
+          <div class="ceo-name-text">Biola Bhadmus</div>
+          <div class="ceo-title-text">Founder & Senior Partner, QuickReg Nigeria</div>
+          <a href="https://www.linkedin.com/in/abiola-bhadmus-m-b-a-acti-acis-6b991a148" target="_blank" class="ceo-linkedin">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="wrap">
+    <div class="stag" data-reveal="up">Why QuickReg</div>
+    <h2 class="big" data-reveal="up" style="transition-delay:.1s">We Serve You <em>Like Partners,</em> Not Agents</h2>
+    <div class="why-grid" data-reveal="up">
+      <div class="wcard"><div class="wcard-n">01</div><h3>Lightning-Fast Processing</h3><p>Most incorporations completed within 48–72 hours. We work around your timezone, not ours.</p></div>
+      <div class="wcard"><div class="wcard-n">02</div><h3>Fully Remote Onboarding</h3><p>Every step is 100% digital. From submission to document delivery — you never need to set foot in Nigeria.</p></div>
+      <div class="wcard"><div class="wcard-n">03</div><h3>Transparent Pricing</h3><p>No hidden charges. Full cost disclosed before you commit a single kobo or dollar.</p></div>
+      <div class="wcard"><div class="wcard-n">04</div><h3>Global Reach</h3><p>We serve clients across the world. Multi-currency payments accepted.</p></div>
+      <div class="wcard"><div class="wcard-n">05</div><h3>Post-Incorporation Partner</h3><p>Annual returns, compliance tracking, regulatory updates — we stay with you long-term.</p></div>
+      <div class="wcard"><div class="wcard-n">06</div><h3>White-Glove Service</h3><p>Specialized care for high-value, sensitive projects — from origin to final setup and ongoing support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <div style="text-align:center;">
+      <div class="stag" style="margin:0 auto 1rem;">Client Reviews</div>
+      <h2 class="big" data-reveal="up" style="max-width:500px;margin:0 auto;">Real Feedback, <em>Real Success</em></h2>
+    </div>
+    <div class="tgrid" data-reveal="up">
+      <div class="tcard"><div class="tstars">★★★★★</div><div class="tq">"</div><p class="tt">We needed to establish a subsidiary for our European fintech. QuickReg handled the NIPC registration, share capital structuring, and CAC filing entirely remotely. Exceptional service.</p><div class="tauthor"><div class="tav">DM</div><div><div class="tname">David Müller</div><div class="trole">CFO, BerlinPay GmbH · Germany</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><div class="tq">"</div><p class="tt">As a UK-based Nigerian entrepreneur, I needed a partner who understood both worlds. QuickReg delivered my company documents in under 48 hours. Bank account set up within a week.</p><div class="tauthor"><div class="tav">AO</div><div><div class="tname">Adaeze Okonkwo</div><div class="trole">Founder, AO Skincare Ltd · London, UK</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><div class="tq">"</div><p class="tt">QuickReg walked us through Section 18 NIPC compliance and the expatriate quota process. Their regulatory depth is unmatched. We're now fully operational with repatriation rights.</p><div class="tauthor"><div class="tav">KL</div><div><div class="tname">Kevin Lim</div><div class="trole">Regional Director, SingTrade Asia · Singapore</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-lay">
+      <div class="faq-side" data-reveal="left">
+        <div class="stag" data-reveal="left">FAQ</div>
+        <h2 class="big" data-reveal="left" style="transition-delay:.08s">Common Questions <em>Answered</em></h2>
+        <p class="sub" data-reveal="left" style="transition-delay:.16s">Have a specific question? Speak to a specialist directly.</p>
+        <a href="https://wa.me/2348086732547" class="btn-p" style="margin-top:2rem;display:inline-flex;">💬 WhatsApp a Specialist</a>
+      </div>
+      <div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>What is the minimum share capital for a foreign-owned company in Nigeria?</span><div class="fi-tog">+</div></div><div class="fi-a">Foreign-owned companies in Nigeria require a minimum paid-up share capital of ₦100 Million Naira (approx. $65,000 USD) as mandated by the NIPC under Section 18 of the NIPC Act. QuickReg guides you through the entire structuring process.</div></div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>Do I need to travel to Nigeria to incorporate my company?</span><div class="fi-tog">+</div></div><div class="fi-a">No. QuickReg's process is 100% remote. All KYC, document submission, and regulatory filings are handled digitally. Your Certificate of Incorporation and all documents are delivered electronically.</div></div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>What is NIPC registration and why is it mandatory?</span><div class="fi-tog">+</div></div><div class="fi-a">The Nigerian Investment Promotion Commission (NIPC) registration is mandatory for all foreign-owned businesses in Nigeria. It grants your company the right to operate, repatriate profits, and access foreign exchange through the CBN.</div></div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>How long does the full incorporation process take?</span><div class="fi-tog">+</div></div><div class="fi-a">Standard CAC incorporation takes 48–72 hours. With NIPC registration, the full process typically takes 5–10 business days. We keep you updated at every stage.</div></div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>Can I repatriate my profits and capital from Nigeria?</span><div class="fi-tog">+</div></div><div class="fi-a">Yes. Foreign investors registered with the NIPC are entitled to freely repatriate capital, dividends, and profits through CBN-licensed banks. QuickReg ensures your documents are structured to support this from day one.</div></div>
+        <div class="fi"><div class="fi-q" onclick="toggleFaq(this)"><span>What currencies and payment methods do you accept?</span><div class="fi-tog">+</div></div><div class="fi-a">We accept GBP, USD, EUR, CAD, NGN, AED and more via bank wire transfer, Wise, or Paystack. Contact us for your preferred payment method before proceeding.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="wrap">
+    <div class="cta-box" data-reveal="scale">
+      <div class="stag" style="margin:0 auto 1rem;">Start Today</div>
+      <h2 data-reveal="up">Your Nigerian Entity,<br/><em>Activated Remotely</em></h2>
+      <p>Join 10,000+ global businesses and entrepreneurs who've entered Nigeria's market through QuickReg. Fast. Compliant. Bank-ready.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-p" onclick="openEnquiry('Market Entry Consultation');return false;">Book a Market Entry Consultation →</a>
+        <a href="https://wa.me/2348086732547" class="btn-ol-w">💬 WhatsApp Us</a>
+        <a href="tel:+2348086732547" class="btn-ol-w">📞 Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg-grid">
+    <div class="fbrand">
+      <a class="flogo" href="#">Quick<span>Reg</span></a>
+      <p>QuickReg | Nigeria Market Entry & Foreign Company Incorporation Experts. Tax, license and permits consultant.</p>
+    </div>
+    <div class="fcol">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Foreign-Owned Company Setup</a></li>
+        <li><a href="#services">NIPC Registration</a></li>
+        <li><a href="#services">CAC Incorporation</a></li>
+        <li><a href="#services">IP Protection</a></li>
+        <li><a href="#services">Tax ID for Foreigners</a></li>
+        <li><a href="#services">Annual Compliance</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#foreign">Foreign Investors</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+2348086732547">📞 +234 808 673 2547</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#4b22252d240b3a3e222820392e2c65252c">✉️ <span class="__cf_email__" data-cfemail="e1888f878ea1909488828a938486cf8f86">[email&#160;protected]</span></a></li>
+        <li><a>📍 Suite 40, Crosstownmall, 72 Iju Road Agege Pen Cinema, Lagos</a></li>
+        <li><a href="https://wa.me/2348086732547">💬 WhatsApp</a></li>
+        <li><a>Mon–Sat: 8am–8pm WAT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 <span>QuickReg Nigeria</span>. All rights reserved.</p>
+    <p>Foreign company registration Nigeria · NIPC registration · FDI Nigeria · Market entry Nigeria</p>
+  </div>
+</footer>
+
+<button id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- MARKET ENTRY 2-STEP FORM -->
+<div id="me-overlay" onclick="handleMEOverlay(event)">
+  <div id="me-box">
+
+    <!-- Progress bar -->
+    <div class="me-prog">
+      <div class="me-prog-top">
+        <span class="me-prog-label" id="me-prog-lbl">Step 1 of 2</span>
+        <span class="me-prog-pct" id="me-prog-pct">50%</span>
+      </div>
+      <div class="me-track"><div class="me-fill" id="me-fill" style="width:50%"></div></div>
+    </div>
+
+    <!-- Header -->
+    <div class="me-hdr">
+      <div class="me-hdr-txt">
+        <h3 id="me-h3">Start Your Market Entry</h3>
+        <p id="me-p">Takes under 30 seconds.</p>
+      </div>
+      <button class="me-x" onclick="closeME()">✕</button>
+    </div>
+
+    <!-- Steps -->
+    <div class="me-steps">
+
+      <!-- STEP 1 -->
+      <div class="me-s active" id="me-s1">
+        <div class="me-f">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="me-name" placeholder="e.g. Chukwuemeka Obi" autocomplete="name"/>
+        </div>
+        <div class="me-f">
+          <label>Email Address <span class="req">*</span></label>
+          <input type="email" id="me-email" placeholder="e.g. you@company.com" autocomplete="email"/>
+        </div>
+        <div class="me-f">
+          <label>Service Type</label>
+          <input type="text" id="me-service" value="Market Entry" readonly style="background:#f0eeea;color:var(--orange);font-weight:600;cursor:default;"/>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="me-s" id="me-s2">
+        <div class="me-f">
+          <label>What do you want to achieve? <span class="req">*</span></label>
+          <textarea id="me-goal" placeholder="e.g. Register a foreign-owned company, expand into Nigeria, get compliant…"></textarea>
+        </div>
+        <div class="me-f">
+          <label>Target Market <span class="req">*</span></label>
+          <input type="text" id="me-market" placeholder="e.g. Nigeria, UK, USA, West Africa"/>
+        </div>
+        <div class="me-f">
+          <label>Budget Range <span class="opt">(optional)</span></label>
+          <select id="me-budget">
+            <option value="">— Select a range (optional) —</option>
+            <option>₦100k – ₦300k</option>
+            <option>₦300k – ₦700k</option>
+            <option>₦700k+</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Error -->
+    <div class="me-err" id="me-err"></div>
+
+    <!-- Footer -->
+    <div class="me-foot">
+      <button class="me-btn-back" id="me-back-btn" onclick="meBack()" disabled>← Back</button>
+      <button class="me-btn-next" id="me-next-btn" onclick="meNext()">
+        <span id="me-next-txt">Continue →</span>
+        <div class="me-spin" id="me-spin"></div>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ME THANK YOU -->
+<div id="me-ty">
+  <span class="ty-icon">✅</span>
+  <h2 class="ty-title" style="font-size:clamp(1.5rem,4vw,2.2rem);">Your request has been received.</h2>
+  <p class="ty-msg">We'll review your details and get back to you<br/>within <strong>24 hours.</strong></p>
+  <a href="#" onclick="closeMETy();openEnquiry('Book a Consultation');return false;" class="btn-p" style="margin-bottom:.9rem;animation:tyUp .6s .5s ease both;opacity:0;">📅 Book a Consultation</a>
+  <button onclick="closeMETy()" style="background:none;border:1.5px solid rgba(0,0,0,0.12);color:#777;font-family:'Sora',sans-serif;font-size:.84rem;font-weight:600;padding:11px 24px;border-radius:9px;cursor:pointer;animation:tyUp .6s .65s ease both;opacity:0;">← Back to Home</button>
+</div>
+
+<!-- ENQUIRY MODAL -->
+<div id="enq-overlay" onclick="handleEnqOverlay(event)">
+  <div id="enq-box">
+    <div class="enq-head">
+      <div class="enq-head-text">
+        <h3>Let's Get You Started</h3>
+        <p>Fill in your details — we'll be in touch within 24 hours.</p>
+      </div>
+      <button class="enq-close" onclick="closeEnquiry()">✕</button>
+    </div>
+    <div class="enq-body">
+      <div class="enq-field">
+        <label>Full Name <span>*</span></label>
+        <input type="text" id="enq-name" placeholder="e.g. Chukwuemeka Obi"/>
+      </div>
+      <div class="enq-field">
+        <label>Email Address <span>*</span></label>
+        <input type="email" id="enq-email" placeholder="e.g. you@company.com"/>
+      </div>
+      <div class="enq-field">
+        <label>Phone Number <span>*</span></label>
+        <input type="tel" id="enq-phone" placeholder="e.g. +234 808 673 2547"/>
+      </div>
+      <div class="enq-field">
+        <label>Service Type <span>*</span></label>
+        <select id="enq-service">
+          <option value="">— Select a service —</option>
+          <option>Register a Company / Business Name</option>
+          <option>NGO / Church / Club or Foundation</option>
+          <option>Tax Registration</option>
+          <option>SCUML Registration</option>
+          <option>Ships &amp; Yachts Registration</option>
+          <option>Free Trade Zone Company</option>
+          <option>Market Entry Consultation</option>
+          <option>Book a Consultation</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="enq-field">
+        <label>Additional Details</label>
+        <textarea id="enq-details" placeholder="Tell us more — timeline, questions, anything helpful…"></textarea>
+      </div>
+      <div class="enq-err" id="enq-err"></div>
+      <button class="enq-submit" id="enq-btn" onclick="submitEnquiry()">
+        <span id="enq-btn-text">Send My Request</span>
+        <div class="enq-spinner" id="enq-spin"></div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- THANK YOU SCREEN -->
+<div id="thankyou-page">
+  <span class="ty-icon">🎉</span>
+  <h2 class="ty-title">Thank you!</h2>
+  <p class="ty-msg">Your request has been received.<br/>We'll get back to you within <strong>24 hours.</strong></p>
+  <a href="https://wa.me/2348086732547" class="ty-wa">💬 Chat us on WhatsApp</a>
+  <br/>
+  <button onclick="closeThankyou()" style="margin-top:1.2rem;background:none;border:1.5px solid rgba(0,0,0,0.15);color:#666;font-family:'Sora',sans-serif;font-size:.85rem;font-weight:600;padding:11px 26px;border-radius:9px;cursor:pointer;transition:all .2s;animation:tyUp .6s .65s ease both;opacity:0;">← Back to Home</button>
+</div>
+
+<a class="wa" href="https://wa.me/2348086732547">💬</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ══════════════════════════════
+   1. LOADER
+══════════════════════════════ */
+function runLoader() {
+  var chars = document.querySelectorAll('.ql-char');
+  var fill  = document.getElementById('ql-fill');
+  var sub   = document.getElementById('ql-sub');
+  var loader = document.getElementById('qr-loader');
+
+  // Stagger letters in
+  chars.forEach(function(c) {
+    var delay = parseInt(c.dataset.delay) || 0;
+    setTimeout(function() { c.classList.add('in'); }, delay + 100);
+  });
+
+  // Show tagline
+  setTimeout(function() { if(sub) sub.classList.add('in'); }, 500);
+
+  // Animate bar
+  setTimeout(function() { if(fill) fill.style.width = '100%'; }, 200);
+
+  // Hide loader and start page animations
+  setTimeout(function() {
+    if(loader) loader.classList.add('done');
+    startPageIn();
+  }, 2000);
+}
+
+function startPageIn() {
+  document.querySelector('nav').classList.add('nav-in');
+
+  // ── Safe h1 line-by-line reveal (no regex on innerHTML) ──
+  var h1 = document.getElementById('hero-h1');
+  if (h1) {
+    var lines = [
+      { text: 'Seamless Market Entry:', orange: false },
+      { text: 'Incorporate Your Business', orange: true },
+      { text: 'in Nigeria', orange: false }
+    ];
+    h1.innerHTML = lines.map(function(l, i) {
+      return '<span class="h1-line"><span class="h1-li' + (l.orange ? ' h1-orange' : '') + '">' + l.text + '</span></span>';
+    }).join('');
+
+    h1.querySelectorAll('.h1-li').forEach(function(el, i) {
+      setTimeout(function() { el.classList.add('in'); }, 300 + i * 160);
+    });
+  }
+
+  // ── Eyebrow ──
+  var ey = document.querySelector('.eyebrow');
+  if (ey) setTimeout(function() { ey.classList.add('hero-in'); }, 150);
+
+  // ── Desc ──
+  var desc = document.querySelector('.hero-desc');
+  if (desc) setTimeout(function() { desc.classList.add('hero-in'); }, 820);
+
+  // ── I Want To title ──
+  var iwt = document.querySelector('.iwant-title');
+  if (iwt) setTimeout(function() { iwt.classList.add('hero-in'); }, 940);
+
+  // ── I Want To buttons stagger ──
+  document.querySelectorAll('.iwant-btn').forEach(function(b, i) {
+    setTimeout(function() { b.classList.add('hero-in'); }, 1020 + i * 70);
+  });
+
+  // ── Canvas + scroll systems ──
+  initHeroCanvas();
+  initReveal();
+  initParallax();
+}
+
+/* ══════════════════════════════
+   HERO PARTICLE CANVAS
+══════════════════════════════ */
+function initHeroCanvas() {
+  var canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W, H, particles = [];
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+
+  // Create particles
+  for (var i = 0; i < 55; i++) {
+    particles.push({
+      x: rand(0, W || 1200),
+      y: rand(0, H || 800),
+      r: rand(1, 3.5),
+      vx: rand(-.25, .25),
+      vy: rand(-.4, -.1),
+      alpha: rand(.15, .55),
+      color: Math.random() > .6 ? '232,99,26' : '180,100,50'
+    });
+  }
+
+  // Mouse influence
+  var mx = -999, my = -999;
+  canvas.closest('section').addEventListener('mousemove', function(e) {
+    var r = canvas.getBoundingClientRect();
+    mx = e.clientX - r.left;
+    my = e.clientY - r.top;
+  });
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    particles.forEach(function(p) {
+      // Mouse repel
+      var dx = p.x - mx, dy = p.y - my;
+      var dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < 100) {
+        var force = (100 - dist) / 100;
+        p.vx += (dx / dist) * force * 0.3;
+        p.vy += (dy / dist) * force * 0.3;
+      }
+
+      // Speed limit
+      var speed = Math.sqrt(p.vx*p.vx + p.vy*p.vy);
+      if (speed > 1.2) { p.vx *= 1.2/speed; p.vy *= 1.2/speed; }
+
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vx *= 0.99;
+      p.vy *= 0.99;
+
+      // Wrap
+      if (p.x < -10) p.x = W + 10;
+      if (p.x > W + 10) p.x = -10;
+      if (p.y < -10) p.y = H + 10;
+      if (p.y > H + 10) p.y = -10;
+
+      // Draw
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + p.color + ',' + p.alpha + ')';
+      ctx.fill();
+    });
+
+    // Draw connecting lines
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 110) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(232,99,26,' + ((1 - dist/110) * 0.1) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+/* ══════════════════════════════
+   2. SCROLL REVEAL
+══════════════════════════════ */
+function initReveal() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('revealed');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('[data-reveal]').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Stagger children inside grids — slide in from bottom with delay
+  var stagger = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        var items = e.target.querySelectorAll('.scard,.wcard,.tcard,.fc,.fi');
+        items.forEach(function(item, i) {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(28px)';
+          item.style.transition = 'none';
+          setTimeout(function() {
+            item.style.transition = 'opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1)';
+            item.style.opacity = '1';
+            item.style.transform = 'none';
+          }, 60 + i * 80);
+        });
+        stagger.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.svc-grid,.why-grid,.tgrid,.fc-list,.faq-lay > div:last-child').forEach(function(g) {
+    stagger.observe(g);
+  });
+}
+
+/* ══════════════════════════════
+   3. PARALLAX
+══════════════════════════════ */
+function initParallax() {
+  var heroInner = document.querySelector('.hero-inner');
+  var orbs = document.querySelectorAll('.hero-orb');
+
+  function onScroll() {
+    var sy = window.scrollY;
+
+    // Orbs drift at different speeds
+    orbs.forEach(function(orb, i) {
+      var speed = [0.18, 0.12, 0.22][i] || 0.15;
+      orb.style.transform = 'translateY(' + (sy * speed) + 'px)';
+    });
+
+    // Hero content lifts gently — NO opacity change
+    if (heroInner && sy < window.innerHeight) {
+      heroInner.style.transform = 'translateY(' + (sy * 0.1) + 'px)';
+    }
+
+    // Scroll progress bar
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    var prog = document.getElementById('scroll-progress');
+    if (prog) prog.style.width = ((sy / docH) * 100) + '%';
+
+    // Scroll-to-top
+    var stb = document.getElementById('stb');
+    if (stb) stb.classList.toggle('show', sy > 400);
+
+    // Nav shadow
+    var nav = document.querySelector('nav');
+    if (nav) nav.style.boxShadow = sy > 20 ? '0 2px 24px rgba(0,0,0,0.07)' : 'none';
+
+
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+/* ══════════════════════════════
+   4. CUSTOM CURSOR
+══════════════════════════════ */
+(function() {
+  var dot  = document.getElementById('cur-dot');
+  var ring = document.getElementById('cur-ring');
+  var mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  });
+
+  // Ring follows with smooth lag
+  (function lerpRing() {
+    rx += (mx - rx) * 0.14;
+    ry += (my - ry) * 0.14;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(lerpRing);
+  })();
+
+  // Hover states
+  var hoverEls = 'a,button,.iwant-btn,.scard,.wcard,.tcard,.fc,.fi-q';
+  document.querySelectorAll(hoverEls).forEach(function(el) {
+    el.addEventListener('mouseenter', function() { ring.classList.add('hovered'); });
+    el.addEventListener('mouseleave', function() { ring.classList.remove('hovered'); });
+  });
+
+  document.addEventListener('mousedown', function() { ring.classList.add('clicking'); });
+  document.addEventListener('mouseup',   function() { ring.classList.remove('clicking'); });
+  document.addEventListener('mouseleave', function() { dot.classList.add('hidden'); ring.classList.add('hidden'); });
+  document.addEventListener('mouseenter', function() { dot.classList.remove('hidden'); ring.classList.remove('hidden'); });
+})();
+
+/* ══════════════════════════════
+   5. BUTTON RIPPLE EFFECT
+══════════════════════════════ */
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.btn-p,.btn-nav.fill,.f-sub,.iwant-btn');
+  if (!btn) return;
+  var r = document.createElement('span');
+  r.className = 'ripple';
+  var rect = btn.getBoundingClientRect();
+  var size = Math.max(rect.width, rect.height) * 2;
+  r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - rect.left - size/2) + 'px;top:' + (e.clientY - rect.top - size/2) + 'px;';
+  btn.appendChild(r);
+  setTimeout(function() { r.remove(); }, 600);
+});
+
+/* ══════════════════════════════
+   6. MAGNETIC BUTTON EFFECT
+══════════════════════════════ */
+document.querySelectorAll('.btn-p,.btn-nav.fill').forEach(function(btn) {
+  btn.addEventListener('mousemove', function(e) {
+    var rect = btn.getBoundingClientRect();
+    var cx = rect.left + rect.width / 2;
+    var cy = rect.top  + rect.height / 2;
+    var dx = (e.clientX - cx) * 0.22;
+    var dy = (e.clientY - cy) * 0.22;
+    btn.style.transform = 'translate(' + dx + 'px,' + dy + 'px) scale(1.04)';
+  });
+  btn.addEventListener('mouseleave', function() {
+    btn.style.transform = '';
+  });
+});
+
+/* ══════════════════════════════
+   8. HAMBURGER & FAQ & FORM
+══════════════════════════════ */
+var ham = document.getElementById('ham');
+var mobNav = document.getElementById('mobNav');
+ham.addEventListener('click', function() {
+  ham.classList.toggle('active');
+  mobNav.classList.toggle('open');
+});
+document.addEventListener('click', function(e) {
+  if (!ham.contains(e.target) && !mobNav.contains(e.target)) {
+    ham.classList.remove('active');
+    mobNav.classList.remove('open');
+  }
+});
+function closeNav() {
+  ham.classList.remove('active');
+  mobNav.classList.remove('open');
+}
+
+function toggleFaq(el) {
+  var item = el.closest('.fi');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fi').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+function submitForm() {
+  var name = document.getElementById('fn').value.trim();
+  var biz = document.getElementById('fb').value.trim();
+  var email = document.getElementById('fe').value.trim();
+  var err = document.getElementById('ferr');
+  if (!name) { err.textContent = '⚠ Please enter your full name.'; return; }
+  if (!biz)  { err.textContent = '⚠ Please enter your proposed company name.'; return; }
+  if (!email || !email.includes('@')) { err.textContent = '⚠ Please enter a valid email address.'; return; }
+  err.textContent = '';
+  document.getElementById('fBody').style.display = 'none';
+    document.getElementById('fBody').style.display = 'none';
+  document.getElementById('fSucc').style.display = 'block';
+  var s1 = document.getElementById('s1n');
+  if(s1){s1.textContent='✓';s1.style.color='var(--orange)';s1.style.borderColor='var(--orange)';s1.style.background='var(--odim)';}
+}
+
+/* ── ENQUIRY MODAL ── */
+/* ══════════════════════════════
+   MARKET ENTRY 2-STEP FORM
+══════════════════════════════ */
+var meCurrentStep = 1;
+
+function openME() {
+  meCurrentStep = 1;
+  // Reset all fields
+  ['me-name','me-email','me-goal','me-market'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  document.getElementById('me-budget').selectedIndex = 0;
+  document.getElementById('me-service').value = 'Market Entry';
+  document.getElementById('me-err').textContent = '';
+  meUpdateUI(false);
+  document.getElementById('me-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(function(){ var f=document.getElementById('me-name'); if(f) f.focus(); }, 420);
+}
+
+function closeME() {
+  document.getElementById('me-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleMEOverlay(e) {
+  if (e.target === document.getElementById('me-overlay')) closeME();
+}
+
+function closeMETy() {
+  document.getElementById('me-ty').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function meUpdateUI(goBack) {
+  // Switch step panels
+  for (var i = 1; i <= 2; i++) {
+    var el = document.getElementById('me-s' + i);
+    el.classList.remove('active','back');
+    if (i === meCurrentStep) {
+      el.classList.add('active');
+      if (goBack) el.classList.add('back');
+    }
+  }
+  // Progress
+  var pct = meCurrentStep === 1 ? 50 : 100;
+  document.getElementById('me-fill').style.width = pct + '%';
+  document.getElementById('me-prog-lbl').textContent = 'Step ' + meCurrentStep + ' of 2';
+  document.getElementById('me-prog-pct').textContent = pct + '%';
+  // Header
+  if (meCurrentStep === 1) {
+    document.getElementById('me-h3').textContent = 'Start Your Market Entry';
+    document.getElementById('me-p').textContent = 'Takes under 30 seconds.';
+    document.getElementById('me-next-txt').textContent = 'Continue →';
+  } else {
+    document.getElementById('me-h3').textContent = 'Tell us what you need';
+    document.getElementById('me-p').textContent = 'Almost done — just 3 quick fields.';
+    document.getElementById('me-next-txt').textContent = 'Submit Request →';
+  }
+  // Buttons
+  document.getElementById('me-back-btn').disabled = meCurrentStep === 1;
+  document.getElementById('me-err').textContent = '';
+}
+
+function meValidate() {
+  var err = document.getElementById('me-err');
+  if (meCurrentStep === 1) {
+    var n = document.getElementById('me-name').value.trim();
+    var e = document.getElementById('me-email').value.trim();
+    if (!n) { err.textContent = '⚠ Please enter your full name.'; return false; }
+    if (!e || !e.includes('@') || !e.includes('.')) { err.textContent = '⚠ Please enter a valid email address.'; return false; }
+  }
+  if (meCurrentStep === 2) {
+    var g = document.getElementById('me-goal').value.trim();
+    var m = document.getElementById('me-market').value.trim();
+    if (!g) { err.textContent = '⚠ Please describe your project goal.'; return false; }
+    if (!m) { err.textContent = '⚠ Please enter your target market.'; return false; }
+  }
+  err.textContent = '';
+  return true;
+}
+
+function meNext() {
+  if (!meValidate()) return;
+  if (meCurrentStep === 1) {
+    meCurrentStep = 2;
+    meUpdateUI(false);
+    setTimeout(function(){ var f=document.getElementById('me-goal'); if(f) f.focus(); }, 400);
+  } else {
+    // Submit
+    var btn = document.getElementById('me-next-btn');
+    var spin = document.getElementById('me-spin');
+    var txt = document.getElementById('me-next-txt');
+    btn.disabled = true;
+    spin.style.display = 'block';
+    txt.textContent = 'Submitting…';
+    setTimeout(function() {
+      closeME();
+      btn.disabled = false;
+      spin.style.display = 'none';
+      txt.textContent = 'Submit Request →';
+      document.getElementById('me-ty').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }, 1600);
+  }
+}
+
+function meBack() {
+  if (meCurrentStep > 1) {
+    meCurrentStep--;
+    meUpdateUI(true);
+  }
+}
+
+function closeThankyou() {
+  document.getElementById('thankyou-page').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function openEnquiry(service) {
+  var overlay = document.getElementById('enq-overlay');
+  var sel = document.getElementById('enq-service');
+  var err = document.getElementById('enq-err');
+
+  // Pre-fill service
+  if (service && sel) {
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].text === service || sel.options[i].value === service) {
+        sel.selectedIndex = i;
+        break;
+      }
+    }
+  }
+
+  // Reset errors and form state
+  if (err) err.textContent = '';
+  resetEnqForm();
+
+  // Open
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Focus first field
+  setTimeout(function() {
+    var first = document.getElementById('enq-name');
+    if (first) first.focus();
+  }, 400);
+}
+
+function closeEnquiry() {
+  document.getElementById('enq-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleEnqOverlay(e) {
+  if (e.target === document.getElementById('enq-overlay')) closeEnquiry();
+}
+
+function resetEnqForm() {
+  var btn = document.getElementById('enq-btn');
+  var spin = document.getElementById('enq-spin');
+  var txt = document.getElementById('enq-btn-text');
+  if (btn) btn.disabled = false;
+  if (spin) spin.style.display = 'none';
+  if (txt) txt.textContent = 'Send My Request';
+}
+
+function submitEnquiry() {
+  var name    = document.getElementById('enq-name').value.trim();
+  var email   = document.getElementById('enq-email').value.trim();
+  var phone   = document.getElementById('enq-phone').value.trim();
+  var service = document.getElementById('enq-service').value;
+  var err     = document.getElementById('enq-err');
+  var btn     = document.getElementById('enq-btn');
+  var spin    = document.getElementById('enq-spin');
+  var txt     = document.getElementById('enq-btn-text');
+
+  // Validate
+  if (!name)    { err.textContent = '⚠ Please enter your full name.'; return; }
+  if (!email || !email.includes('@')) { err.textContent = '⚠ Please enter a valid email address.'; return; }
+  if (!phone)   { err.textContent = '⚠ Please enter your phone number.'; return; }
+  if (!service) { err.textContent = '⚠ Please select a service type.'; return; }
+  err.textContent = '';
+
+  // Loading state
+  btn.disabled = true;
+  spin.style.display = 'block';
+  txt.textContent = 'Sending…';
+
+  // Simulate submission (replace with real API if needed)
+  setTimeout(function() {
+    closeEnquiry();
+    document.body.style.overflow = '';
+    // Show thank you screen
+    var ty = document.getElementById('thankyou-page');
+    ty.classList.add('show');
+    // Clear form for next use
+    document.getElementById('enq-name').value = '';
+    document.getElementById('enq-email').value = '';
+    document.getElementById('enq-phone').value = '';
+    document.getElementById('enq-service').selectedIndex = 0;
+    document.getElementById('enq-details').value = '';
+    resetEnqForm();
+  }, 1600);
+}
+
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeEnquiry();
+});
+
+/* ── KICK OFF ── */
+runLoader();
+</script>
+</body>
+</html>
